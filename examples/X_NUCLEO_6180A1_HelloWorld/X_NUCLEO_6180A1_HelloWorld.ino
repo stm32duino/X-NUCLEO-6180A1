@@ -61,12 +61,12 @@
 //#define SATELLITES_MOUNTED
 
 // Components
-STMPE1600DigiOut xshutdown_top(&DEV_I2C, GPIO_12, (0x42 * 2));
+STMPE1600DigiOut xshutdown_top(&DEV_I2C, GPIO_12);
 VL6180_X_NUCLEO_6180A1 sensor_vl6180_top(&DEV_I2C, &xshutdown_top);
 #ifdef SATELLITES_MOUNTED
-STMPE1600DigiOut xshutdown_left(&DEV_I2C, GPIO_14, (0x43 * 2));
+STMPE1600DigiOut xshutdown_left(&DEV_I2C, GPIO_14);
 VL6180_X_NUCLEO_6180A1 sensor_vl6180_left(&DEV_I2C, &xshutdown_left);
-STMPE1600DigiOut xshutdown_right(&DEV_I2C, GPIO_15, (0x43 * 2));
+STMPE1600DigiOut xshutdown_right(&DEV_I2C, GPIO_15);
 VL6180_X_NUCLEO_6180A1 sensor_vl6180_right(&DEV_I2C, &xshutdown_right);
 #endif
 
